@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria - Academia Panobianco</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container-galeria {
+            max-width: 1100px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        thead tr {
+            background-color: #d32f2f;
+            color: #ffffff;
+            text-align: left;
+        }
+        th, td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        tbody tr:hover {
+            background-color: #f9f9f9;
+        }
+        .btn-ver {
+            color: #d32f2f;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .btn-ver:hover {
+            text-decoration: underline;
+        }
+        .foto-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .foto-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .foto-item img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Academia Panobianco</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="aluno.html">Área do Aluno</a></li>
+                <li><a href="avaliacao.html">Avaliação</a></li>
+                <li><a href="video.html">Vídeos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container-galeria">
+        <h2>Galeria de Eventos e Fotos</h2>
+        <p style="text-align: center;">Confira abaixo os registros dos nossos principais eventos e inaugurações.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Evento / Álbum</th>
+                    <th>Data</th>
+                    <th>Unidade</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Inauguração Unidade Centro</strong></td>
+                    <td>15/01/2026</td>
+                    <td>Centro</td>
+                    <td><a href="#" class="btn-ver">Ver Fotos</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Aulão de Ritmos - Verão</strong></td>
+                    <td>10/02/2026</td>
+                    <td>Vila Nova</td>
+                    <td><a href="#" class="btn-ver">Ver Fotos</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Campeonato Cross Training</strong></td>
+                    <td>20/03/2026</td>
+                    <td>Shopping</td>
+                    <td><a href="#" class="btn-ver">Ver Fotos</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 style="margin-top: 40px; color: #d32f2f;">Destaques da Nossa Estrutura</h3>
+        <div class="foto-grid">
+            <div class="foto-item">
+                <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=1470&auto=format&fit=crop" alt="Área de Musculação">
+            </div>
+            <div class="foto-item">
+                <img src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?q=80&w=1470&auto=format&fit=crop" alt="Equipamentos Modernos">
+            </div>
+            <div class="foto-item">
+                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1470&auto=format&fit=crop" alt="Espaço de Treino Livre">
+            </div>
+            <div class="foto-item">
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1470&auto=format&fit=crop" alt="Aula Coletiva">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-info">
+            <p><strong>Endereço:</strong> Rua da Academia, 123 - São Paulo/SP</p>
+            <p><strong>Contato:</strong> (11) 98765-4321 | contato@panobianco.com.br</p>
+        </div>
+        <p>&copy; 2026 Academia Panobianco - Projeto UC15. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

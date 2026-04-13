@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panobianco - Área do Aluno</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #d32f2f;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #333;
+            border-left: 5px solid #d32f2f;
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        thead tr {
+            background-color: #d32f2f;
+            color: #ffffff;
+            text-align: left;
+        }
+        th, td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        tbody tr:hover {
+            background-color: #f9f9f9;
+        }
+        .status-ativo {
+            color: #2e7d32;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Academia Panobianco</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="aluno.html">Área do Aluno</a></li>
+                <li><a href="avaliacao.html">Avaliação</a></li>
+                <li><a href="video.html">Vídeos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>Portal do Aluno - Gestão de Matrículas</h2>
+        <p>Abaixo você pode conferir a listagem de alunos ativos e seus respectivos cronogramas de treino.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome do Aluno</th>
+                    <th>Plano Contratado</th>
+                    <th>Próximo Vencimento</th>
+                    <th>Status</th>
+                    <th>Ficha de Treino</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Gabriel Oliveira</strong></td>
+                    <td>Plano Black</td>
+                    <td>15/05/2026</td>
+                    <td><span class="status-ativo">Ativo</span></td>
+                    <td>Musculação - Treino A</td>
+                </tr>
+                <tr>
+                    <td><strong>Evelyn Oliveira</strong></td>
+                    <td>Plano Gold</td>
+                    <td>20/04/2026</td>
+                    <td><span class="status-ativo">Ativo</span></td>
+                    <td>Treino Funcional</td>
+                </tr>
+                <tr>
+                    <td><strong>Ricardo Silva</strong></td>
+                    <td>Plano Fit</td>
+                    <td>10/04/2026</td>
+                    <td><span class="status-ativo">Ativo</span></td>
+                    <td>Cardio / HIIT</td>
+                </tr>
+                <tr>
+                    <td><strong>Maria Santos</strong></td>
+                    <td>Plano Black</td>
+                    <td>12/06/2026</td>
+                    <td><span class="status-ativo">Ativo</span></td>
+                    <td>Yoga</td>
+                </tr>
+                <tr>
+                    <td><strong>João Pereira</strong></td>
+                    <td>Plano Gold</td>
+                    <td>05/05/2026</td>
+                    <td><span class="status-ativo">Ativo</span></td>
+                    <td>Muay Thai</td>
+                </tr>
+                <tr>
+                    <td><strong>Ana Costa</strong></td>
+                    <td>Plano Fit</td>
+                    <td>18/04/2026</td>
+                    <td><span class="status-ativo">Ativo</span></td>
+                    <td>Musculação - Treino B</td>
+                </tr>
+                <tr>
+                    <td><strong>Lucas Souza</strong></td>
+                    <td>Plano Black</td>
+                    <td>22/07/2026</td>
+                    <td><span class="status-ativo">Ativo</span></td>
+                    <td>Cross Training</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

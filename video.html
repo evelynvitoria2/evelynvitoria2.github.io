@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos - Academia Panobianco</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos específicos para a galeria de vídeos */
+        .video-section {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Proporção 16:9 */
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 40px;
+            background: #000;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .video-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .video-table th {
+            background-color: #d32f2f;
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+        .video-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .video-table tr:hover {
+            background-color: #f9f9f9;
+        }
+        .btn-assistir {
+            color: #d32f2f;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        header {
+            background: #000;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        footer {
+            background: #111;
+            color: #fff;
+            padding: 40px 10%;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="color: #d32f2f; margin: 0;">PANOBIANCO</h1>
+        <nav>
+            <ul style="list-style: none; display: flex; gap: 20px; margin: 0;">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="video.html" style="color: #d32f2f;">Vídeos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="video-section">
+            <h2 style="text-align: center; margin-bottom: 10px;">Galeria de Treinos</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 30px;">Selecione um vídeo na tabela abaixo para assistir no player.</p>
+
+            <div class="video-container">
+                <iframe id="main-player" src="https://www.youtube.com/embed/5U2m_j9H7mI" title="YouTube video player" allowfullscreen></iframe>
+            </div>
+
+            <table class="video-table">
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Categoria</th>
+                        <th>Duração</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Tour Unidade Centro</td><td>Institucional</td><td>03:45</td><td><a href="#" onclick="changeVideo(event, 'https://www.youtube.com/embed/5U2m_j9H7mI')" class="btn-assistir">Assistir agora</a></td></tr>
+                    <tr><td>Dicas de Agachamento</td><td>Técnico</td><td>05:12</td><td><a href="#" onclick="changeVideo(event, 'https://www.youtube.com/embed/Z_Z6TAs5m_o')" class="btn-assistir">Assistir agora</a></td></tr>
+                    <tr><td>Aula de Ritmos</td><td>Aulas Coletivas</td><td>45:00</td><td><a href="#" onclick="changeVideo(event, 'https://www.youtube.com/embed/pW-6X_kGfX0')" class="btn-assistir">Assistir agora</a></td></tr>
+                    <tr><td>Conheça a Panobianco</td><td>Institucional</td><td>00:46</td><td><a href="#" onclick="changeVideo(event, 'https://www.youtube.com/embed/IYoLRPUQTqw')" class="btn-assistir">Assistir agora</a></td></tr>
+                    <tr><td>Treino de Alta Performance</td><td>Motivacional</td><td>02:30</td><td><a href="#" onclick="changeVideo(event, 'https://www.youtube.com/embed/17M_Mclm_Y8')" class="btn-assistir">Assistir agora</a></td></tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer><p>&copy; 2026 Academia Panobianco - Projeto UC15. Todos os direitos reservados.</p></footer>
+
+    <script>
+        function changeVideo(event, url) {
+            event.preventDefault(); // Impede o recarregamento da página
+            const player = document.getElementById('main-player');
+            if (player) {
+                player.src = url;
+                window.scrollTo({ top: 0, behavior: 'smooth' }); // Sobe para o vídeo
+            }
+        }
+    </script>
+</body>
+</html>
